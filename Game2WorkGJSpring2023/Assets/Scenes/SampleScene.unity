@@ -360,8 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3a1d56ab337cc64ba78a295894f206a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursor: {fileID: 2800000, guid: fa07c22144d3f334192e0d11f541de45, type: 3}
-  clickedCursor: {fileID: 2800000, guid: baeb54c3be335a744800fe95fab0a60d, type: 3}
+  cursor: {fileID: 2800000, guid: 3c0557f5a8b029e42bb260d167096581, type: 3}
 --- !u!4 &2079967019
 Transform:
   m_ObjectHideFlags: 0
