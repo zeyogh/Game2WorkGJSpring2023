@@ -18,16 +18,13 @@ public class DialogueManager : MonoBehaviour
     public Button loadNextScene;
     public AudioSource characterVoice;
 
-    public Dialogue[] startConversation;
+    public Dialogue startConversation;
     public CharacterSO[] characters;
     public Queue<Dialogue> startConvos;
 
 
     private Queue<string> sentences;
     private Dialogue currDialogue;
-
-
-    private static int[] coyoteJamPreference = { 3, 0, 1 };
 
 
     private void Awake()
@@ -37,7 +34,11 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
-
+        if (startConversation != null)
+        {
+            StartDialogue(startConversation);
+        }
+        
     }
 
 
@@ -113,14 +114,6 @@ public class DialogueManager : MonoBehaviour
     {
         if (currDialogue.nextDialogue == null)
         {
-            
-
-            if (!SceneManager.GetActiveScene().name.Equals("FrogEndCounter"))
-                loadNextScene.gameObject.SetActive(true);
-            else
-            {
-                SceneManager.LoadScene("CoyoteCounter");
-            }
 
             dialoguePanel.SetActive(false);
             //   characterSprite.gameObject.SetActive(false);
