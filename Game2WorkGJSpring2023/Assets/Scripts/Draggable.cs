@@ -7,15 +7,15 @@ public class Draggable : MonoBehaviour
 
     Vector3 mousePositionOffset;
 
-    private Vector3 getMouseWorldPosition(){
+    Vector3 GetMouseWorldPosition(){
         return Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
-    private void onMouseDown(){
-        mousePositionOffset = gameObject.transform.position - getMouseWorldPosition();
+    void OnMouseDown(){
+        mousePositionOffset = gameObject.transform.position - GetMouseWorldPosition();
     }   
 
-    private void onMouseDrag(){
-        transform.position = getMouseWorldPosition() + mousePositionOffset;
+    void OnMouseDrag(){
+        this.transform.position = GetMouseWorldPosition() + mousePositionOffset;
     }
 }
