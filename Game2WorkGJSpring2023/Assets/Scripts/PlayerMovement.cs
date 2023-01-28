@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         }else if(canMoveUp== 1 && moveInputY > 0){
             rb.velocity = new Vector2(moveInputX * speed, 0);
             canMoveDown = 0;
-        }else if(canMoveDown == 1 && moveInputX < 0){
+        }else if(canMoveDown == 1 && moveInputY < 0){
             rb.velocity = new Vector2(moveInputX * speed, 0);
             canMoveUp = 0;
         }else{
@@ -54,14 +54,16 @@ public class PlayerMovement : MonoBehaviour
         {
             if( moveInputX > 0){
                 canMoveRight = 1;
-            }else if(moveInputX < 0){
+            }
+            else if(moveInputX < 0){
                 canMoveLeft = 1;
-            }else if(moveInputY > 0){
+            }
+            if(moveInputY > 0){
                 canMoveUp = 1;
-            }else if(moveInputX < 0){
+            }else if(moveInputY < 0){
                 canMoveDown = 1;
-        }
-            Debug.Log("inObject");
+            }
+            
 
             
         }
