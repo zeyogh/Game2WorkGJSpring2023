@@ -10,7 +10,10 @@ public class PlayerMovement : MonoBehaviour
     private float moveInputY;
 
     private Rigidbody2D rb;
-    private int inObject = 0;
+    private int canMoveRight = 0;
+    private int canMoveLeft = 0;
+    private int canMoveUp = 0;
+    private int canMoveDown = 0;
 
 
     // Start is called before the first frame update
@@ -21,26 +24,48 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(inObject == 0){
-            moveInputX = Input.GetAxis("Horizontal");
-            moveInputY = Input.GetAxis("Vertical");
         
-        rb.velocity = new Vector2(moveInputX * speed, moveInputY * speed);
+        moveInputX = Input.GetAxis("Horizontal");
+        moveInputY = Input.GetAxis("Vertical");
+
+        if(canMoveRight == 1 && moveInputX > 0){
+            rb.velocity = new Vector2(0, moveInputY * speed);
+            canMoveLeft = 0;
+        }else if(canMoveLeft == 1 && moveInputX < 0){
+            rb.velocity = new Vector2(0, moveInputY * speed);
+            canMoveRight = 0;
+        }else if(canMoveUp== 1 && moveInputY > 0){
+            rb.velocity = new Vector2(moveInputX * speed, 0);
+            canMoveDown = 0;
+        }else if(canMoveDown == 1 && moveInputY < 0){
+            rb.velocity = new Vector2(moveInputX * speed, 0);
+            canMoveUp = 0;
+        }else{
+            rb.velocity = new Vector2(moveInputX * speed, moveInputY * speed);
+            canMoveRight = 0;
+            canMoveLeft = 0;
+            canMoveUp = 0;
+            canMoveDown = 0;
         }
     }
 
     void OnTriggerEnter2D(Collider2D collision){
          if(collision.gameObject.CompareTag("object"))
         {
-            rb.velocity = new Vector2(-1* moveInputX * speed, -1*moveInputY * speed);
-            inObject = 1;
-            Debug.Log("inObject");
+            if( moveInputX > 0){
+                canMoveRight = 1;
+            }
+            else if(moveInputX < 0){
+                canMoveLeft = 1;
+            }
+            if(moveInputY > 0){
+                canMoveUp = 1;
+            }else if(moveInputY < 0){
+                canMoveDown = 1;
+            }
+            
 
-            // while(!Vector2.zero.Equals(rb.velocity)){
-            //         Debug.Log("still no control");
-            // }
-
-            // inObject = 0;
+            
         }
 
        
