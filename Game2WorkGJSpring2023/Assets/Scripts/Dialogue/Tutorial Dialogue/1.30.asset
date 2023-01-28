@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee5033b036b45a46be5a1d81d4a05b5, type: 3}
   m_Name: 1.30
   m_EditorClassIdentifier: 
-  nextScene: Title Screen
+  nextScene: Examination
