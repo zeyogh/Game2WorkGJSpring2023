@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa58de055c518cc44a70785f1ef37b49, type: 3}
-  m_Name: 1.2
+  m_Name: 1.10
   m_EditorClassIdentifier: 
-  character: {fileID: 11400000, guid: 430a4f2500acf8e4b87a605bd4bf4d6d, type: 2}
+  character: {fileID: 11400000, guid: ccf7ee687c2a14e4581281d2e78763c2, type: 2}
   sentences:
-  - ...
-  nextDialogue: {fileID: 11400000, guid: 6c825b176f59bae4ea96d7ce3153d7a6, type: 2}
+  - "How do you deal with a dragon\u2019s toothache?"
+  nextDialogue: {fileID: 11400000, guid: c8889a7bdff58ce4e8501862b6260718, type: 2}

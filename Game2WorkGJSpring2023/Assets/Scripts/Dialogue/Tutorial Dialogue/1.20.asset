@@ -10,9 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa58de055c518cc44a70785f1ef37b49, type: 3}
-  m_Name: 1.2
+  m_Name: 1.20
   m_EditorClassIdentifier: 
-  character: {fileID: 11400000, guid: 430a4f2500acf8e4b87a605bd4bf4d6d, type: 2}
+  character: {fileID: 11400000, guid: ccf7ee687c2a14e4581281d2e78763c2, type: 2}
   sentences:
-  - ...
-  nextDialogue: {fileID: 11400000, guid: 6c825b176f59bae4ea96d7ce3153d7a6, type: 2}
+  - Ah. The same way a housewife we had in the other week dealt with her cheating
+    husband.
+  - A sawed-off shotgun.
+  - "We\u2019ll do this first patient together."
+  nextDialogue: {fileID: 11400000, guid: 07c3b4e93534c2b4b81fa50134e7bc90, type: 2}

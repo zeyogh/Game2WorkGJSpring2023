@@ -439,9 +439,14 @@ MonoBehaviour:
   dialogueButton: {fileID: 0}
   loadNextScene: {fileID: 0}
   characterVoice: {fileID: 0}
+  conversationHeads:
+  - {fileID: 11400000, guid: eb76637b012e07c43904597b744ee76c, type: 2}
   startConversation: {fileID: 11400000, guid: 367c03639462d0f43b159ebdb7fd60b1, type: 2}
   characters:
   - {fileID: 11400000, guid: ab9ee1aefc11062499c976a824eb0c52, type: 2}
+  - {fileID: 11400000, guid: ccf7ee687c2a14e4581281d2e78763c2, type: 2}
+  - {fileID: 11400000, guid: baf1b1913b578cc48b7d4cd033fa94d3, type: 2}
+  - {fileID: 11400000, guid: 430a4f2500acf8e4b87a605bd4bf4d6d, type: 2}
 --- !u!4 &1757191493
 Transform:
   m_ObjectHideFlags: 0

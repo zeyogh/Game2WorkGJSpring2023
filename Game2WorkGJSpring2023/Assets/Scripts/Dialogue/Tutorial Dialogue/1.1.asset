@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: ab9ee1aefc11062499c976a824eb0c52, type: 2}
   sentences:
-  - Testing 1
+  - "(Today is my first day as a big-town physician\u2026I hope nothing crazy happens.)"
   nextDialogue: {fileID: 11400000, guid: 74eb701aa059d164b94a870c81f8a3a4, type: 2}

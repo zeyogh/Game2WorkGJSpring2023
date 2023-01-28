@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa58de055c518cc44a70785f1ef37b49, type: 3}
+  m_Name: 1.16
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: ccf7ee687c2a14e4581281d2e78763c2, type: 2}
+  sentences:
+  - "Time\u2019s up! Not bad, young one. You\u2019ve still got some to learn, but
+    I have a feeling you\u2019ll pick it up quick. For your sake, I hope. We\u2019re
+    no backwater town, for every patient you treat there\u2019ll be ten more waiting."
+  nextDialogue: {fileID: 11400000, guid: 342d5fa480ad57649a200a85914e8ad2, type: 2}

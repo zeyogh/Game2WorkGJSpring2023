@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa58de055c518cc44a70785f1ef37b49, type: 3}
-  m_Name: 1.2
+  m_Name: 1.11
   m_EditorClassIdentifier: 
-  character: {fileID: 11400000, guid: 430a4f2500acf8e4b87a605bd4bf4d6d, type: 2}
+  character: {fileID: 11400000, guid: ab9ee1aefc11062499c976a824eb0c52, type: 2}
   sentences:
-  - ...
-  nextDialogue: {fileID: 11400000, guid: 6c825b176f59bae4ea96d7ce3153d7a6, type: 2}
+  - Use a plank or a bar to keep the jaw open.
+  nextDialogue: {fileID: 11400000, guid: 0a4cd4d9f2d091f4984aa37bbf921de6, type: 2}

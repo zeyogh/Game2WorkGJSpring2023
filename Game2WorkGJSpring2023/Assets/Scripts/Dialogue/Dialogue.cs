@@ -18,6 +18,7 @@ public class Dialogue : ScriptableObject
     [TextArea(3, 10)]
     public string[] sentences;
     public Dialogue nextDialogue;
+    public DialogueTail dialogueTail;
 
 
 

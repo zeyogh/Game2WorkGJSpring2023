@@ -18,6 +18,7 @@ public class DialogueManager : MonoBehaviour
     public Button loadNextScene;
     public AudioSource characterVoice;
 
+    public DialogueHead[] conversationHeads;
     public Dialogue startConversation;
     public CharacterSO[] characters;
     public Queue<Dialogue> startConvos;
@@ -58,7 +59,15 @@ public class DialogueManager : MonoBehaviour
         button.gameObject.SetActive(true);
     }
 
-
+    public void StartDialogueWithID(string dialougeID)
+    {
+        foreach (DialogueHead head in conversationHeads) {
+            if (head.conversationID.Equals(dialougeID))
+            {
+                StartDialogue(head.firstDialogue);
+            }
+        }
+    }
     public void StartDialogue(Dialogue dialogue)
     {
         //  Debug.Log("Starting conversation with " + dialogue.NPCName);
@@ -69,10 +78,10 @@ public class DialogueManager : MonoBehaviour
             characterSprite.sprite = dialogue.character.NPCSprite;
             characterSprite.gameObject.SetActive(true);
         }
-        else if (dialogue.character.NPCSprite == null && !dialogue.character.name.Equals("You"))
-        {
-            characterSprite.gameObject.SetActive(false);
-        }
+    //    else if (dialogue.character.NPCSprite == null && !dialogue.character.name.Equals("You"))
+      //  {
+       //     characterSprite.gameObject.SetActive(false);
+        //}
         
 
         if (dialogue.character.voice != null)
@@ -112,6 +121,10 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
+        if (currDialogue.dialogueTail != null)
+        {
+            SceneManager.LoadScene(currDialogue.dialogueTail.nextScene);
+        }
         if (currDialogue.nextDialogue == null)
         {
 
