@@ -78,10 +78,10 @@ public class DialogueManager : MonoBehaviour
             characterSprite.sprite = dialogue.character.NPCSprite;
             characterSprite.gameObject.SetActive(true);
         }
-    //    else if (dialogue.character.NPCSprite == null && !dialogue.character.name.Equals("You"))
-      //  {
-       //     characterSprite.gameObject.SetActive(false);
-        //}
+        else if (dialogue.character.NPCSprite == null && !dialogue.character.name.Equals("You"))
+        {
+            characterSprite.gameObject.SetActive(false);
+        }
         
 
         if (dialogue.character.voice != null)
